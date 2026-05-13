@@ -58,6 +58,14 @@ SAMPLE: Dict[str, Any] = {
     "processes_eu_personal_data": True,
     "headcount": 80,
     "stage": "series_b",
+    # Phase 3 additions (defaults false; sample profile does not trigger HIPAA / NIS2 / CSF)
+    "processes_phi": False,
+    "us_healthcare_covered_entity": False,
+    "us_healthcare_business_associate": False,
+    "nis2_essential_entity": False,
+    "nis2_important_entity": False,
+    "adopts_nist_csf": False,
+    "us_government_contractor": False,
 }
 
 
@@ -72,6 +80,10 @@ FRAMEWORKS = {
     "gdpr": {"name": "Regulation (EU) 2016/679 (GDPR)", "type": "regulation", "certifiable": False, "binding": True},
     "soc_2": {"name": "AICPA SOC 2 Trust Services", "type": "attestation", "certifiable": True, "binding": False},
     "fda_qsr": {"name": "FDA 21 CFR 820 (QSR)", "type": "regulation", "certifiable": False, "binding": True},
+    # Phase 3 additions
+    "nist_csf": {"name": "NIST Cybersecurity Framework 2.0", "type": "framework_profile", "certifiable": False, "binding": False},
+    "nis2": {"name": "Directive (EU) 2022/2555 (NIS2)", "type": "regulation", "certifiable": False, "binding": True},
+    "hipaa": {"name": "HIPAA Security + Privacy + Breach Notification Rules", "type": "regulation", "certifiable": False, "binding": True},
 }
 
 
@@ -83,6 +95,10 @@ DEPENDENCIES = {
     "eu_ai_act": ["iso_42001"],              # voluntary AIMS satisfies parts of Article 17
     "soc_2": ["iso_27001"],                  # ISO 27001 controls map to SOC 2 TSC
     "fda_qsr": ["iso_13485"],                # QSR mostly harmonised with 13485
+    # Phase 3 additions
+    "nist_csf": [],                          # voluntary framework; no prereqs
+    "nis2": ["iso_27001"],                   # NIS2 risk-mgmt + reporting maps to 27001 controls
+    "hipaa": ["iso_27001"],                  # HIPAA Security Rule overlaps ISO 27001 Annex A
 }
 
 
@@ -125,6 +141,18 @@ def select_frameworks(profile: Dict[str, Any]) -> List[str]:
         # FDA QSR — medical device sold in US
         if profile.get("sells_to_us_customers"):
             selected.append("fda_qsr")
+
+    # HIPAA — any US healthcare PHI processing
+    if profile.get("processes_phi") or profile.get("us_healthcare_covered_entity") or profile.get("us_healthcare_business_associate"):
+        selected.append("hipaa")
+
+    # NIS2 — operates in EU as essential or important entity per Annex I/II of Directive 2022/2555
+    if profile.get("nis2_essential_entity") or profile.get("nis2_important_entity"):
+        selected.append("nis2")
+
+    # NIST CSF — voluntary; recommended for any org with cybersecurity programme (esp. US gov-adjacent)
+    if profile.get("adopts_nist_csf") or profile.get("us_government_contractor"):
+        selected.append("nist_csf")
 
     return selected
 
@@ -190,6 +218,12 @@ def _rationale(profile: Dict[str, Any], selected: List[str]) -> List[str]:
         notes.append("EU MDR 745: medical device sold in EU; binding; mandatory CE marking.")
     if "fda_qsr" in selected:
         notes.append("FDA QSR: medical device sold in US; binding; FDA quality system regulation.")
+    if "hipaa" in selected:
+        notes.append("HIPAA: processes US PHI; binding Security Rule (45 CFR 164 Subpart C) + Privacy Rule + Breach Notification.")
+    if "nis2" in selected:
+        notes.append("NIS2: essential or important entity in EU per Directive 2022/2555 Annex I/II; binding; cybersecurity + incident reporting obligations.")
+    if "nist_csf" in selected:
+        notes.append("NIST CSF 2.0: voluntary cybersecurity framework; recommended for US gov-adjacent orgs; cross-walks ISO 27001 + SOC 2 Common Criteria.")
     return notes
 
 

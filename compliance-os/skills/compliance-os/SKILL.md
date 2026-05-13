@@ -1,6 +1,6 @@
 ---
 name: "compliance-os"
-description: "Compliance OS — meta-orchestrator that lets compliance teams CONFIGURE which frameworks apply, COMPUTE cross-framework control overlap, SIMULATE internal audits, and CONSOLIDATE evidence across multiple frameworks. Four decisions: (1) Given a company profile, which of the 9 supported frameworks apply (ISO 27001/13485/42001/14971, EU AI Act, MDR 745, GDPR, SOC 2, FDA QSR)? (2) Across selected frameworks, which controls overlap and how much evidence reuses? (3) For a given framework + scope, what does a realistic mock audit produce? (4) Across selected frameworks, what's the unified evidence checklist with reuse map? Use when standing up a multi-framework program, planning the annual audit calendar, or preparing for certification stage 1. Does NOT replace per-framework skills (it orchestrates them)."
+description: "Compliance OS — meta-orchestrator that lets compliance teams CONFIGURE which frameworks apply, COMPUTE cross-framework control overlap, SIMULATE internal audits, and CONSOLIDATE evidence across multiple frameworks. Four decisions: (1) Given a company profile, which of the 12 supported frameworks apply (ISO 27001/13485/42001/14971, EU AI Act, MDR 745, GDPR, SOC 2, FDA QSR, NIST CSF 2.0, NIS2, HIPAA)? (2) Across selected frameworks, which controls overlap and how much evidence reuses? (3) For a given framework + scope, what does a realistic mock audit produce — drawing from the 205-scenario library? (4) Across selected frameworks, what's the unified evidence checklist with reuse map? Use when standing up a multi-framework program, planning the annual audit calendar, or preparing for certification stage 1. Does NOT replace per-framework skills (it orchestrates them)."
 license: MIT
 metadata:
   version: 1.0.0
@@ -9,14 +9,14 @@ metadata:
   domain: multi-framework-compliance-orchestration
   updated: 2026-05-13
   python-tools: framework_selector.py, cross_framework_mapper.py, audit_simulator.py, evidence_pool_generator.py
-  frameworks: iso-27001, iso-13485, iso-42001, iso-14971, eu-ai-act, eu-mdr-745, gdpr, soc-2, fda-qsr
+  frameworks: iso-27001, iso-13485, iso-42001, iso-14971, eu-ai-act, eu-mdr-745, gdpr, soc-2, fda-qsr, nist-csf, nis2, hipaa
 ---
 
 # Compliance OS — Meta-Orchestrator
 
 Multi-framework compliance program orchestration. **Four decisions, no per-framework deep-dive:**
 
-1. **Which frameworks apply to this company?** — `framework_selector.py` ranks the 9 supported frameworks against a company profile (industry, geography, AI use, medical, financial, headcount, customers) and returns applicable ones with dependency graph
+1. **Which frameworks apply to this company?** — `framework_selector.py` ranks the 12 supported frameworks against a company profile (industry, geography, AI use, medical, financial, headcount, customers, healthcare-PHI, NIS2 essential/important entity, US gov contractor) and returns applicable ones with dependency graph
 2. **How much do selected frameworks overlap?** — `cross_framework_mapper.py` computes control-level overlap with confidence rating; outputs unified control matrix + evidence-reuse opportunities
 3. **What does a mock audit produce?** — `audit_simulator.py` generates 8–15 finding scenarios with severity distribution matching IIA expectations + interview questions per control
 4. **What's the unified evidence checklist?** — `evidence_pool_generator.py` consolidates evidence across enabled frameworks; outputs which artefact satisfies which controls across which frameworks
@@ -195,11 +195,17 @@ python scripts/evidence_pool_generator.py program.json
 ## References
 
 - [compliance_os_pattern.md](references/compliance_os_pattern.md) — The meta-framework architecture (configure → map → simulate → consolidate → review); when to use vs not
-- [cross_framework_overlap.md](references/cross_framework_overlap.md) — The 9-framework × control-family overlap table with mapping confidence
+- [cross_framework_overlap.md](references/cross_framework_overlap.md) — The 9-framework × control-family overlap table with mapping confidence (Phase 3 expands to 12 frameworks via `cross_framework_mapper.py`)
 - [audit_simulation_methodology.md](references/audit_simulation_methodology.md) — ISO 19011 + IIA IPPF + AICPA AT-C audit-simulation principles + severity distribution heuristics
 - [evidence_management.md](references/evidence_management.md) — Evidence pool design + retention + freshness + reuse-leverage scoring
+- [multi_framework_audit_playbook.md](references/multi_framework_audit_playbook.md) — Integrated audit programme for 2+ frameworks (Phase 2)
+- [evidence_artifact_reuse_index.md](references/evidence_artifact_reuse_index.md) — Empirically-derived reuse-leverage ranking across all 12 frameworks (Phase 3)
+
+## Phase 3 Asset: Mock Audit Scenario Library
+
+`assets/mock_audit_library.json` — 205 pre-built finding scenarios spanning 12 frameworks + 26 themes + 4 severity levels (34 critical, 88 major, 54 minor, 29 observation). Each scenario tags applicable frameworks; cross-reference `scripts/cross_framework_mapper.py` merged-controls catalogue to resolve framework-specific control IDs. Use as input to enrich `audit_simulator.py` mock audits, as a training resource for new internal auditors, or as the seed for finding-pattern detection across multi-framework programmes.
 
 ---
 
-**Version:** 1.0.0
+**Version:** 1.2.0
 **Status:** Production Ready
