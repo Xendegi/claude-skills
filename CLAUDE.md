@@ -299,9 +299,9 @@ This repository publishes skills to **ClawHub** (clawhub.com) as the distributio
    - `source` (object) — provenance metadata for skills built via Path-B megaprompt conversion. Recommended shape: `{spec: "megaprompts/NN-name.md", build_pattern: "...", distinct_from: "..."}`. Used by all 13 v2 megaprompt-derived skills (productivity/, marketing/, research/).
    - `attribution` (object) — credit metadata for skills derived from external MIT-licensed work. Used by `engineering/caveman`, `engineering/grill-me`, `engineering/grill-with-docs` (Matt Pocock derivatives).
 
-   No other extras. The `skills` value depends on the plugin layout (Claude Code v2.1.107+ rejects bare `"./"`):
+   No other extras. The `skills` value depends on the plugin layout (Claude Code v2.1.107+ rejects bare `"./"`, and v2.1.133+ rejects `"./skills"` with a "Path escapes plugin directory" warning — drop the `./` prefix):
    - Single-skill plugin (SKILL.md at root): `"skills": ["./"]` (array form required).
-   - Plugin with `./skills/` subdir: `"skills": "./skills"`.
+   - Plugin with `skills/` subdir: `"skills": "skills"` (no `./` prefix — see issue #686).
    - Multi-skill domain plugin (skills are subfolders at root): `"skills": ["./sub1", "./sub2", ...]` (explicit list, omit `"./"` to avoid namespace collision with the index SKILL.md).
 6. **Version follows repo versioning.** ClawHub package versions must match the repo release version (currently v2.7.0+).
 
