@@ -96,5 +96,5 @@ affiliated with or endorsed by Marc Andreessen or a16z.**
 
 ---
 
-**Version:** 1.0.0 (ships in repo release v2.8.3)
+**Version:** 1.0.0 (ships in repo release v2.8.4)
 **License:** MIT

@@ -137,9 +137,11 @@ See [standards/git/git-workflow-standards.md](standards/git/git-workflow-standar
 
 ## Current Version
 
-**Version:** v2.8.3 (released — productivity/andreessen v1.0)
+**Version:** v2.8.4 (released — productivity/andreessen v1.0)
 
-**v2.8.3 highlights — productivity/andreessen skill, Marc Andreessen-mode:**
+**v2.8.3** shipped the Mistral Vibe cross-platform sync (`scripts/sync-vibe-skills.py`, `~/.vibe/skills/claude-skills/`) — bringing first-class tool support to 13 coding agents.
+
+**v2.8.4 highlights — productivity/andreessen skill, Marc Andreessen-mode:**
 
 New `productivity/andreessen/` plugin — the Andreessen-lens counterpart to a founder-operating-system plugin. A blunt, market-first operator that pressure-tests ventures/ideas/features/career-bets through Andreessen's documented frameworks (market > team > product; product/market fit is the only milestone; bias to build) and runs his 3x5-card + Anti-Todo daily routine.
 
@@ -415,5 +417,5 @@ This repository publishes skills to **ClawHub** (clawhub.com) as the distributio
 ---
 
 **Last Updated:** May 24, 2026
-**Version:** v2.8.3
+**Version:** v2.8.4
 **Status:** 330 skills deployed across 14 domains, 61 marketplace plugins, docs site live
