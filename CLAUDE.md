@@ -145,6 +145,25 @@ See [standards/git/git-workflow-standards.md](standards/git/git-workflow-standar
 
 ## Current Version
 
+**Version:** v2.10.3 (md-slides — slide-deck converter; completes the markdown-html/ domain)
+
+**v2.10.3 highlights — md-slides (markdown deck → single-file HTML presentation):**
+
+Completes the `markdown-html/` domain at 5 skills. The Tier-3 use case from Shihipar's essay ("Slide Decks"): a markdown deck (slides separated by `---` HR boundaries or `# ` H1 headings, with optional `<!-- notes: ... -->` presenter notes blocks) becomes a single-file HTML presentation that runs in any browser with keyboard nav, presenter mode, and print-to-PDF.
+
+- **`md-slides` skill** — three stdlib tools pipeline together (slide_splitter → presenter_notes_parser → deck_html_renderer):
+  - **`slide_splitter.py`** — splits markdown on `---` HR or `# ` H1 boundaries (or `--boundary auto`: HR wins ≥ 3, else H1 ≥ 5). Extracts the first heading per slide as the title. Hard rule: refuses 1-slide decks (exit 5 — it's a poster) and no-boundary input (exit 6 — route to md-document). Soft-warns slides > 40 source lines (signal-to-noise; renders anyway).
+  - **`presenter_notes_parser.py`** — extracts `<!-- notes: ... -->` blocks (also `speaker-notes:` and `presenter:` aliases) from each slide, attaches as a separate `notes` field, strips from the body so the slide renders cleanly. Tracks `notes_coverage_pct` for the optional `--strict-notes` gate (refuses < 50% coverage).
+  - **`deck_html_renderer.py`** — single-file HTML deck. All slides as `<section class="slide">` elements, one visible at a time (CSS-controlled). Vanilla JS keyboard handlers: `→`/`Space`/`PgDn` advance; `←`/`PgUp` previous; `Home`/`End` first/last; `P` toggles presenter mode; `Esc` exits presenter. URL-hash deep linking (`#3` jumps to slide 3, browser back/forward walks slides). Progress bar at top (3px); slide counter bottom-right. Presenter mode = split view: current slide (60% width) + panel (40% width with clock + speaker notes + next-slide preview). `@media print { section { display: block; page-break-after: always; } }` → `Cmd+P` produces PDF with one slide per page. `prefers-reduced-motion` honored. Reuses `md-document/scripts/markdown_parser.py` for slide-body content rendering. Prism.js is **opt-in via `--syntax`** (off by default — most decks don't need it; keeps the file tiny).
+- **3 reference docs** each citing 5-7 sources: `presentation_ux.md` (Atkinson *Beyond Bullet Points* + Reynolds *Presentation Zen* + Tufte *Cognitive Style of PowerPoint* + NN/g + Weinschenk + Marp/reveal.js/Big convergence + Tom MacWright), `keyboard_nav_patterns.md` (reveal.js / Big / Spectacle keymap + WCAG 2.1.1 + 2.4.3 + MDN KeyboardEvent + NN/g), `single_file_deck_conventions.md` (Big + Marp + Pandoc + reveal.js standalone + WCAG 2.3.3 + `@media print`).
+- **1 template asset** documenting the canonical single-file deck shape.
+- **`/cs:md-slides` slash command** with 6 pre-flight gates + pipeline + output digest.
+- **Empirical footprint**: 5-slide sample deck (3 with presenter notes) → 12.2 KB single-file HTML with keyboard nav + presenter mode + print-to-PDF. By comparison, equivalent Google Slides / Keynote / reveal.js multi-file exports are 200 KB+ of CSS/JS chrome.
+- **Plugin manifest:** `markdown-html-skills` plugin.json `skills` array now lists 5 paths (orchestrator + design-system + md-document + md-review + md-slides). Marketplace counters updated: 64 plugins, 17 domains, **343 skills**, **548 Python tools**, **691 references**, **90+ slash commands**.
+- **Domain status: COMPLETE.** All 5 planned skills shipped across 4 PRs (#780 foundation, #793 md-document, #795 md-review, this PR md-slides). The markdown-html/ domain operationalizes Shihipar's central claim — markdown collapses past 100 lines; HTML restores density, clarity, shareability, and lightweight interaction — across all three layout families (long-form documents, code reviews, slide decks).
+
+---
+
 **Version:** v2.10.2 (md-review — code-review converter for the markdown-html/ domain)
 
 **v2.10.2 highlights — md-review (code-review markdown → 2-col HTML):**
