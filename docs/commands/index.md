@@ -143,7 +143,7 @@ description: "92 slash commands for Claude Code, Codex CLI, and Gemini CLI — s
 
     ---
 
-    Generate a concise product requirements document for a feature, initiative, or problem statement.
+    Generate a concise, evidence-gated product requirements document for $ARGUMENTS.
 
 -   :material-console:{ .lg .middle } **[`/project-health`](project-health.md)**
 
@@ -191,7 +191,7 @@ description: "92 slash commands for Claude Code, Codex CLI, and Gemini CLI — s
 
     ---
 
-    Create a sprint plan with prioritized stories and capacity guardrails.
+    Create a sprint plan for $ARGUMENTS with explicit capacity math, a carry-over check, and a definition-of-ready gate. ...
 
 -   :material-console:{ .lg .middle } **[`/tc`](tc.md)**
 
@@ -203,7 +203,7 @@ description: "92 slash commands for Claude Code, Codex CLI, and Gemini CLI — s
 
     ---
 
-    Generate tests, analyze coverage, and validate test quality using the TDD Guide skill.
+    Drive a test-first workflow for $ARGUMENTS using the TDD Guide skill. The first word of $ARGUMENTS selects the mode (...
 
 -   :material-console:{ .lg .middle } **[`/tech-debt`](tech-debt.md)**
 
@@ -281,7 +281,7 @@ description: "92 slash commands for Claude Code, Codex CLI, and Gemini CLI — s
 
     ---
 
-    Triggers the scraping architect to analyze and extract data from the target URL.
+    Run a gated extraction pipeline for $ARGUMENTS using skills/universal-scraping-architect/SKILL.md.
 
 -   :material-console:{ .lg .middle } **[`/cs-workflow-build`](cs-workflow-build.md)**
 

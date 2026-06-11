@@ -1,6 +1,6 @@
 site_name: Claude Code Skills & Agent Plugins
 site_url: https://alirezarezvani.github.io/claude-skills/
-site_description: "337 production-ready agent skills, 66 installable plugins, and 90+ slash commands across 17 domains — engineering, product, marketing, compliance, finance, and research. Works with Claude Code, OpenAI Codex, Gemini CLI, Cursor, Hermes Agent, Mistral Vibe, OpenClaw, and 6 more AI coding tools. Open source, MIT licensed, zero dependencies."
+site_description: "345 production-ready agent skills, 78 installable plugins, and 90+ slash commands across 17 domains — engineering, product, marketing, compliance, finance, and research. Works with Claude Code, OpenAI Codex, Gemini CLI, Cursor, Hermes Agent, Mistral Vibe, OpenClaw, and 6 more AI coding tools. Open source, MIT licensed, zero dependencies."
 site_author: Alireza Rezvani
 repo_url: https://github.com/alirezarezvani/claude-skills
 repo_name: alirezarezvani/claude-skills
@@ -65,6 +65,10 @@ plugins:
         'skills/engineering/feature-flags-architect-feature-flags-architect.md': 'skills/engineering/feature-flags-architect.md'
         'skills/engineering/kubernetes-operator-kubernetes-operator.md': 'skills/engineering/kubernetes-operator.md'
         'skills/engineering/slo-architect-slo-architect.md': 'skills/engineering/slo-architect.md'
+        # Skills removed/renamed upstream — redirect old indexed URLs to their successors.
+        'skills/marketing-skill/ai-seo.md': 'skills/marketing-skill/aeo.md'
+        'skills/engineering/release-manager.md': 'skills/engineering/changelog-generator.md'
+        'skills/engineering/command-guide.md': 'skills/engineering/index.md'
 
 extra:
   social:
@@ -224,7 +228,6 @@ nav:
       - "PR Review Expert": skills/engineering/pr-review-expert.md
       - "Prompt Governance": skills/engineering/prompt-governance.md
       - "RAG Architect": skills/engineering/rag-architect.md
-      - "Release Manager": skills/engineering/release-manager.md
       - "Runbook Generator": skills/engineering/runbook-generator.md
       - "Secrets Vault Manager": skills/engineering/secrets-vault-manager.md
       - "Security Guidance": skills/engineering/security-guidance.md
@@ -284,7 +287,6 @@ nav:
       - "A/B Test Setup": skills/marketing-skill/ab-test-setup.md
       - "Ad Creative": skills/marketing-skill/ad-creative.md
       - "AEO (Answer Engine Optimization)": skills/marketing-skill/aeo.md
-      - "AI SEO": skills/marketing-skill/ai-seo.md
       - "Analytics Tracking": skills/marketing-skill/analytics-tracking.md
       - "App Store Optimization": skills/marketing-skill/app-store-optimization.md
       - "Brand Guidelines": skills/marketing-skill/brand-guidelines.md

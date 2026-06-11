@@ -8,7 +8,7 @@ description: "Use for web scraping, crawling, document extraction, API parsing, 
 <div class="page-meta" markdown>
 <span class="meta-badge">:material-rocket-launch: Engineering - POWERFUL</span>
 <span class="meta-badge">:material-identifier: `universal-scraping-architect`</span>
-<span class="meta-badge">:material-github: <a href="https://github.com/alirezarezvani/claude-skills/tree/main/engineering/universal-scraping-architect/SKILL.md">Source</a></span>
+<span class="meta-badge">:material-github: <a href="https://github.com/alirezarezvani/claude-skills/tree/main/engineering/universal-scraping-architect/skills/universal-scraping-architect/SKILL.md">Source</a></span>
 </div>
 
 <div class="install-banner" markdown>
@@ -16,9 +16,15 @@ description: "Use for web scraping, crawling, document extraction, API parsing, 
 </div>
 
 
-You are an expert web scraping and data extraction engineer. Your goal is to design complete, robust data pipelines with intelligent routing, validation, and token budget tracking—not brittle one-off scripts.
+Design complete, robust data-extraction pipelines with intelligent routing, validation, and token-budget tracking — not brittle one-off scripts.
 
-**Dependency Notice:** This skill utilizes `firecrawl`, `pandas`, `requests`, and `beautifulsoup4`. It uses a BYOK (Bring Your Own Key) pattern for Firecrawl. API keys must only be loaded via environment variables.
+**Dependency Notice:** BYOK (Bring Your Own Key) pattern for Firecrawl; API keys must only be loaded via environment variables. Per-script dependencies:
+
+| Script | Dependencies | Exact CLI |
+|---|---|---|
+| `scripts/validate_extraction.py` | stdlib only | `python3 scripts/validate_extraction.py output.json --json` |
+| `scripts/firecrawl_example.py` | `firecrawl`, `requests` (template; `--sample` runs offline) | `python3 scripts/firecrawl_example.py --sample` |
+| `scripts/local_bs4_example.py` | `beautifulsoup4`, `pandas` (template; `--sample` runs offline) | `python3 scripts/local_bs4_example.py --sample` |
 
 ## Before Starting
 **Check for context first:**
@@ -40,8 +46,8 @@ Use when Firecrawl handles URL discovery/web extraction, but local Python (Panda
 When executing a scraping task, always follow this sequence:
 1. **Route the Approach:** Explicitly state whether Firecrawl or Local Python is being used and why.
 2. **Track Budgets:** Estimate Firecrawl API quotas or LLM token context limits before executing large jobs. 
-3. **Extract Safely:** Implement checkpointing for multi-page jobs. Handle pagination and dynamic layouts gracefully.
-4. **Validate & Clean:** Enforce required fields, catch empty outputs, flag duplicates, and normalize field names.
+3. **Extract Safely:** Implement checkpointing for multi-page jobs. Handle pagination and dynamic layouts gracefully. Start from the editable runner templates — `scripts/firecrawl_example.py` (Mode 1) or `scripts/local_bs4_example.py` (Mode 2); run each with `--sample` first to see the expected summary shape without network access.
+4. **Validate & Clean:** Run `python3 scripts/validate_extraction.py extracted_output.json --json` on every extraction result before delivering it. It exits 0 only on `{"status": "ok"}`; `warning` (empty output) or `error` (malformed JSON) exit 1 — fix and re-extract, never ship unvalidated data. Beyond this structural gate, also check required fields and duplicates against the pipeline spec before delivering.
 5. **Format:** Default to CSV for tabular data, JSON for nested structures, and Markdown for clean text.
 
 ## Proactive Triggers

@@ -1,5 +1,5 @@
 ---
-title: "md-document — Long-form Markdown to HTML — Claude Code Plugin & Agent Skill"
+title: "md-document — Long-form Markdown to HTML — Agent Skill for HTML Output"
 description: "Converts long-form markdown (specs, RFCs, reports, plans, explainers) into a single-file, lightly-interactive HTML document with sticky TOC. Agent skill for Claude Code, Codex CLI, Gemini CLI, OpenClaw."
 ---
 

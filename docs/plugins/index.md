@@ -1,13 +1,13 @@
 ---
-title: "Claude Code Plugin Marketplace — 66 Agent Plugins"
-description: "66 installable agent plugins for Claude Code, Codex CLI, Gemini CLI, and OpenClaw. 13 domain bundles + 53 standalone packages covering engineering, marketing, product, C-level advisory, compliance, commercial, finance, productivity, and research. One-command install."
+title: "Claude Code Plugin Marketplace — 78 Agent Plugins"
+description: "78 installable agent plugins for Claude Code, Codex CLI, Gemini CLI, and OpenClaw. 14 domain bundles + 64 standalone packages covering engineering, marketing, product, C-level advisory, compliance, commercial, finance, productivity, and research. One-command install."
 ---
 
 <div class="skills-hero" markdown>
 
 # Plugins & Marketplace
 
-**66 installable plugins** — 13 domain bundles and 53 standalone packages, distributed through the Claude Code plugin registry and ClawHub.
+**78 installable plugins** — 14 domain bundles and 64 standalone packages, distributed through the Claude Code plugin registry and ClawHub.
 
 <p class="skills-hero-sub">Install an entire skill domain or a single tool with one command. Compatible with Claude Code, OpenAI Codex, Gemini CLI, and OpenClaw.</p>
 
@@ -19,11 +19,11 @@ description: "66 installable agent plugins for Claude Code, Codex CLI, Gemini CL
 
 <div class="grid cards" markdown>
 
--   :material-puzzle-outline:{ .lg .middle } **66 Plugins**
+-   :material-puzzle-outline:{ .lg .middle } **78 Plugins**
 
     ---
 
-    13 domain bundles + 53 standalone packages
+    14 domain bundles + 64 standalone packages
 
 -   :material-domain:{ .lg .middle } **17 Domains**
 
@@ -31,7 +31,7 @@ description: "66 installable agent plugins for Claude Code, Codex CLI, Gemini CL
 
     Engineering, marketing, product, C-level, compliance, commercial, operations, research, finance, productivity, and more
 
--   :material-toolbox-outline:{ .lg .middle } **337 Skills**
+-   :material-toolbox-outline:{ .lg .middle } **345 Skills**
 
     ---
 
@@ -91,18 +91,18 @@ description: "66 installable agent plugins for Claude Code, Codex CLI, Gemini CL
 ```mermaid
 graph TB
     subgraph Registry["Plugin Registry"]
-        MP["marketplace.json<br/>66 plugins"]
+        MP["marketplace.json<br/>78 plugins"]
     end
 
-    subgraph Bundles["Domain Bundles (13)"]
-        B1["engineering-skills · 51<br/>engineering-advanced-skills · 75"]
-        B2["marketing-skills · 48<br/>c-level-skills · 61"]
-        B3["product-skills · 17 · pm-skills · 9<br/>ra-qm-skills · 18"]
+    subgraph Bundles["Domain Bundles (14)"]
+        B1["engineering-skills · 51<br/>engineering-advanced-skills · 74"]
+        B2["marketing-skills · 47<br/>c-level-skills · 61"]
+        B3["product-skills · 17 · pm-skills · 9<br/>ra-qm-skills · 18 · compliance-os · 9"]
         B4["business-growth · business-operations<br/>commercial · finance"]
         B5["research-ops-skills · 5<br/>markdown-html-skills · 5"]
     end
 
-    subgraph Standalone["Standalone Plugins (53)"]
+    subgraph Standalone["Standalone Plugins (64)"]
         S1["Engineering: pw, agenthub, llm-wiki,<br/>slo-architect, chaos-engineering..."]
         S2["Leadership: c-level-agents,<br/>executive-mentor, vpe-advisor..."]
         S3["Research: pulse, litreview, grants,<br/>dossier, patent, syllabus, notebooklm"]
@@ -123,11 +123,12 @@ Domain bundles install an entire skill domain — every skill, Python tool, refe
 | Bundle | Skills | What you get | Browse |
 |---|:-:|---|---|
 | `engineering-skills` | 51 | Full engineering team: architecture, frontend, backend, QA, DevOps, SecOps, AI/ML, data, Playwright Pro, self-improving agent | [:octicons-arrow-right-24:](../skills/engineering-team/index.md) |
-| `engineering-advanced-skills` | 75 | Agent designer, RAG architect, MCP server builder, CI/CD, SLO architect, chaos engineering, security auditing, tech debt | [:octicons-arrow-right-24:](../skills/engineering/index.md) |
+| `engineering-advanced-skills` | 74 | Agent designer, RAG architect, MCP server builder, CI/CD, SLO architect, chaos engineering, security auditing, tech debt | [:octicons-arrow-right-24:](../skills/engineering/index.md) |
 | `product-skills` | 17 | PM toolkit (RICE, PRDs), agile PO, UX research, discovery, analytics, SaaS scaffolder, Apple HIG expert | [:octicons-arrow-right-24:](../skills/product-team/index.md) |
-| `marketing-skills` | 48 | Content, SEO, AEO, CRO, paid channels, growth, intelligence, sales enablement — 8 specialist pods | [:octicons-arrow-right-24:](../skills/marketing-skill/index.md) |
+| `marketing-skills` | 47 | Content, SEO, AEO, CRO, paid channels, growth, intelligence, sales enablement — 8 specialist pods | [:octicons-arrow-right-24:](../skills/marketing-skill/index.md) |
 | `c-level-skills` | 61 | Full C-suite advisors, founder-mode boardroom, decision logger, scenario war room, M&A playbook | [:octicons-arrow-right-24:](../skills/c-level-advisor/index.md) |
 | `ra-qm-skills` | 18 | ISO 13485, MDR 2017/745, FDA 510(k)/PMA, ISO 27001, GDPR, CAPA, ISO 14971 risk management | [:octicons-arrow-right-24:](../skills/ra-qm-team/index.md) |
+| `compliance-os` | 9 | Audit-prep orchestrator: readiness and evidence checklists for ISO 13485, ISO 27001, SOC 2, GDPR, FDA QSR, EU AI Act, ISO 42001 | [:octicons-arrow-right-24:](../skills/compliance-os/index.md) |
 | `pm-skills` | 9 | Senior PM, scrum master, Jira/Confluence experts, Atlassian admin with bundled remote MCP | [:octicons-arrow-right-24:](../skills/project-management/index.md) |
 | `business-growth-skills` | 5 | Customer success, sales engineering, revenue operations, contract & proposal writer | [:octicons-arrow-right-24:](../skills/business-growth/index.md) |
 | `business-operations-skills` | 7 | Process mapping, vendor management, capacity planning, internal comms, knowledge ops, procurement | [:octicons-arrow-right-24:](../skills/business-operations/index.md) |
@@ -218,12 +219,13 @@ Two approved extension fields are permitted:
 
 ---
 
-## All 66 Plugins at a Glance
+## All 78 Plugins at a Glance
 
 | Plugin | Type | Category | Source |
 |---|---|---|---|
 | `business-growth-skills` | Bundle | business-growth | `./business-growth` |
 | `commercial-skills` | Bundle | commercial | `./commercial` |
+| `compliance-os` | Bundle | compliance | `./compliance-os` |
 | `ra-qm-skills` | Bundle | compliance | `./ra-qm-team` |
 | `engineering-advanced-skills` | Bundle | development | `./engineering` |
 | `engineering-skills` | Bundle | development | `./engineering-team` |
@@ -235,12 +237,16 @@ Two approved extension fields are permitted:
 | `product-skills` | Bundle | product | `./product-team` |
 | `pm-skills` | Bundle | project-management | `./project-management` |
 | `research-ops-skills` | Bundle | research-ops | `./research-ops` |
+| `compliance-team-eu-ai-act` | Standalone | compliance | `./ra-qm-team/compliance-team-eu-ai-act` |
+| `compliance-team-iso42001` | Standalone | compliance | `./ra-qm-team/compliance-team-iso42001` |
 | `apple-hig-expert` | Standalone | design | `./product-team/apple-hig-expert` |
 | `a11y-audit` | Standalone | development | `./engineering-team/a11y-audit` |
 | `agenthub` | Standalone | development | `./engineering/agenthub` |
 | `autoresearch-agent` | Standalone | development | `./engineering/autoresearch-agent` |
+| `behuman` | Standalone | development | `./engineering/behuman` |
 | `caveman` | Standalone | development | `./engineering/caveman` |
 | `chaos-engineering` | Standalone | development | `./engineering/chaos-engineering` |
+| `claude-coach` | Standalone | development | `./engineering/claude-coach` |
 | `code-tour` | Standalone | development | `./engineering/code-tour` |
 | `data-quality-auditor` | Standalone | development | `./engineering/data-quality-auditor` |
 | `demo-video` | Standalone | development | `./engineering/demo-video` |
@@ -248,19 +254,25 @@ Two approved extension fields are permitted:
 | `feature-flags-architect` | Standalone | development | `./engineering/feature-flags-architect` |
 | `google-workspace-cli` | Standalone | development | `./engineering-team/google-workspace-cli` |
 | `grill-me` | Standalone | development | `./engineering/grill-me` |
+| `grill-with-docs` | Standalone | development | `./engineering/grill-with-docs` |
 | `handoff-engineering` | Standalone | development | `./engineering/handoff` |
 | `helm-chart-builder` | Standalone | development | `./engineering/helm-chart-builder` |
 | `karpathy-coder` | Standalone | development | `./engineering/karpathy-coder` |
 | `kubernetes-operator` | Standalone | development | `./engineering/kubernetes-operator` |
+| `llm-cost-optimizer` | Standalone | development | `./engineering/llm-cost-optimizer` |
+| `prompt-governance` | Standalone | development | `./engineering/prompt-governance` |
 | `pw` | Standalone | development | `./engineering-team/playwright-pro` |
 | `security-guidance` | Standalone | development | `./engineering/security-guidance` |
 | `self-improving-agent` | Standalone | development | `./engineering-team/self-improving-agent` |
 | `slo-architect` | Standalone | development | `./engineering/slo-architect` |
+| `snowflake-development` | Standalone | development | `./engineering-team/snowflake-development` |
 | `statistical-analyst` | Standalone | development | `./engineering/statistical-analyst` |
 | `terraform-patterns` | Standalone | development | `./engineering/terraform-patterns` |
 | `universal-scraping-architect` | Standalone | development | `./engineering/universal-scraping-architect` |
 | `workflow-builder` | Standalone | development | `./engineering/workflow-builder` |
 | `write-a-skill` | Standalone | development | `./engineering/write-a-skill` |
+| `collab-proof` | Standalone | engineering | `./engineering/collab-proof` |
+| `business-investment-advisor` | Standalone | finance | `./finance/business-investment-advisor` |
 | `llm-wiki` | Standalone | knowledge | `./engineering/llm-wiki` |
 | `c-level-agents` | Standalone | leadership | `./c-level-advisor/c-level-agents` |
 | `chief-ai-officer-advisor` | Standalone | leadership | `./c-level-advisor/chief-ai-officer-advisor` |
@@ -271,6 +283,7 @@ Two approved extension fields are permitted:
 | `vpe-advisor` | Standalone | leadership | `./c-level-advisor/vpe-advisor` |
 | `aeo` | Standalone | marketing | `./marketing-skill/skills/aeo` |
 | `landing` | Standalone | marketing | `./marketing/landing` |
+| `video-content-strategist` | Standalone | marketing | `./marketing-skill/video-content-strategist` |
 | `youtube-full` | Standalone | marketing | `./marketing-skill/skills/youtube-full` |
 | `agile-product-owner` | Standalone | product | `./product-team/agile-product-owner` |
 | `code-to-prd` | Standalone | product | `./product-team/code-to-prd` |

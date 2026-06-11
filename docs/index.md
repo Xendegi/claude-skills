@@ -1,6 +1,6 @@
 ---
 title: Agent Skills & Plugins for Claude Code, Codex, Gemini CLI & 10 More AI Tools
-description: "337 production-ready agent skills, 66 installable plugins, and 90+ slash commands across 17 domains — engineering, product, marketing, compliance, finance, and research. Works with Claude Code, OpenAI Codex, Gemini CLI, Cursor, Hermes Agent, Mistral Vibe, OpenClaw, and 6 more AI coding tools. Open source, MIT licensed, zero dependencies."
+description: "345 production-ready agent skills, 78 installable plugins, and 90+ slash commands across 17 domains — engineering, product, marketing, compliance, finance, and research. Works with Claude Code, OpenAI Codex, Gemini CLI, Cursor, Hermes Agent, Mistral Vibe, OpenClaw, and 6 more AI coding tools. Open source, MIT licensed, zero dependencies."
 hide:
   - toc
   - edit
@@ -24,10 +24,10 @@ Give your AI coding agent real domain expertise. Every skill is a self-contained
 [GitHub :fontawesome-brands-github:](https://github.com/alirezarezvani/claude-skills){ .md-button }
 
 <div class="stats-strip">
-  <div class="stat"><span class="stat-number">337</span><span class="stat-label">Skills</span></div>
+  <div class="stat"><span class="stat-number">345</span><span class="stat-label">Skills</span></div>
   <div class="stat"><span class="stat-number">17</span><span class="stat-label">Domains</span></div>
-  <div class="stat"><span class="stat-number">66</span><span class="stat-label">Plugins</span></div>
-  <div class="stat"><span class="stat-number">550+</span><span class="stat-label">Python Tools</span></div>
+  <div class="stat"><span class="stat-number">78</span><span class="stat-label">Plugins</span></div>
+  <div class="stat"><span class="stat-number">570+</span><span class="stat-label">Python Tools</span></div>
   <div class="stat"><span class="stat-number">90+</span><span class="stat-label">Commands</span></div>
   <div class="stat"><span class="stat-number">13</span><span class="stat-label">AI Tools</span></div>
 </div>
@@ -86,7 +86,7 @@ No API keys, no external services, no dependencies between skills. Copy a folder
 
 <div class="grid cards" markdown>
 
--   :material-toolbox:{ .lg .middle } **337 Skills**
+-   :material-toolbox:{ .lg .middle } **345 Skills**
 
     ---
 
@@ -94,7 +94,7 @@ No API keys, no external services, no dependencies between skills. Copy a folder
 
     [:octicons-arrow-right-24: Browse skills](skills/index.md)
 
--   :material-puzzle-outline:{ .lg .middle } **66 Plugins**
+-   :material-puzzle-outline:{ .lg .middle } **78 Plugins**
 
     ---
 
@@ -118,7 +118,7 @@ No API keys, no external services, no dependencies between skills. Copy a folder
 
     [:octicons-arrow-right-24: View commands](commands/index.md)
 
--   :material-language-python:{ .lg .middle } **550+ Python Tools**
+-   :material-language-python:{ .lg .middle } **570+ Python Tools**
 
     ---
 
@@ -182,7 +182,7 @@ Seventeen domains cover the full lifecycle of building a product and running a c
 
     Agent designer, RAG architect, MCP server builder, CI/CD pipelines, SLO architect, chaos engineering, security auditing, tech debt tracking
 
-    [:octicons-arrow-right-24: 75 skills](skills/engineering/index.md)
+    [:octicons-arrow-right-24: 74 skills](skills/engineering/index.md)
 
 -   :material-bullseye-arrow:{ .lg .middle } **Product**
 
@@ -198,7 +198,7 @@ Seventeen domains cover the full lifecycle of building a product and running a c
 
     Content, SEO, AEO, CRO, paid channels, growth, launch strategy — 8 specialist pods with bundled Python analytics tools
 
-    [:octicons-arrow-right-24: 48 skills](skills/marketing-skill/index.md)
+    [:octicons-arrow-right-24: 47 skills](skills/marketing-skill/index.md)
 
 -   :material-star-circle:{ .lg .middle } **C-Level Advisory**
 

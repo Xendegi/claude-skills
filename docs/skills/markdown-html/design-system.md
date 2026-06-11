@@ -1,5 +1,5 @@
 ---
-title: "Design System — Onboarding + Shared Brand Tokens — Claude Code Plugin & Agent Skill"
+title: "Design System — Onboarding + Shared Brand Tokens — Agent Skill for HTML Output"
 description: "Captures the user's brand identity once via a 10-question onboarding wizard (primary/accent HEX + heading + body Google Fonts + design style. Agent skill for Claude Code, Codex CLI, Gemini CLI, OpenClaw."
 ---
 

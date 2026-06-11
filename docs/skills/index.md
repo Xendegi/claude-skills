@@ -1,6 +1,6 @@
 ---
-title: "337 Agent Skills — Browse by Domain"
-description: "Browse 337 production-ready agent skills across 17 domains — engineering, product, marketing, C-level advisory, compliance, commercial, research, and finance. Installable as Claude Code plugins, Codex skills, Gemini CLI skills, and 10 more AI coding tools."
+title: "345 Agent Skills — Browse by Domain"
+description: "Browse 345 production-ready agent skills across 17 domains — engineering, product, marketing, C-level advisory, compliance, commercial, research, and finance. Installable as Claude Code plugins, Codex skills, Gemini CLI skills, and 10 more AI coding tools."
 hide:
   - edit
 ---
@@ -9,26 +9,26 @@ hide:
 
 # Skills Library
 
-337 production-ready agent skills across 17 domains — every one self-contained, security-audited, and installable in one command.
+345 production-ready agent skills across 17 domains — every one self-contained, security-audited, and installable in one command.
 { .skills-hero-sub }
 
 </div>
 
 <div class="grid cards" markdown>
 
--   :material-counter:{ .lg .middle } **337 Skills**
+-   :material-counter:{ .lg .middle } **345 Skills**
 
     ---
 
     Across 17 professional domains
 
--   :material-language-python:{ .lg .middle } **550+ Tools**
+-   :material-language-python:{ .lg .middle } **570+ Tools**
 
     ---
 
     Python CLI tools, all stdlib-only
 
--   :material-package-variant-closed:{ .lg .middle } **66 Plugins**
+-   :material-package-variant-closed:{ .lg .middle } **78 Plugins**
 
     ---
 
@@ -116,7 +116,7 @@ graph LR
 
     [:octicons-arrow-right-24: Browse skills](engineering-team/index.md)
 
--   :material-lightning-bolt:{ .lg .middle } **Engineering — Advanced** <span class="skill-count">75</span>
+-   :material-lightning-bolt:{ .lg .middle } **Engineering — Advanced** <span class="skill-count">74</span>
 
     ---
 
@@ -132,7 +132,7 @@ graph LR
 
     [:octicons-arrow-right-24: Browse skills](product-team/index.md)
 
--   :material-bullhorn:{ .lg .middle } **Marketing** <span class="skill-count">48</span>
+-   :material-bullhorn:{ .lg .middle } **Marketing** <span class="skill-count">47</span>
 
     ---
 

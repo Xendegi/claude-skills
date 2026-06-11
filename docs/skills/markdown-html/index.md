@@ -1,6 +1,6 @@
 ---
 title: "Markdown to HTML Skills — Agent Skills & Codex Plugins"
-description: "5 markdown to html skills — markdown-to-HTML converter agent skill and Claude Code plugin for single-file interactive documents, code reviews, and slide decks. Works with Claude Code, Codex CLI, Gemini CLI, and OpenClaw."
+description: "5 markdown to html skills — markdown-to-interactive-HTML converter agent skill and Claude Code plugin for single-file documents, code reviews, and slide decks. Works with Claude Code, Codex CLI, Gemini CLI, and OpenClaw."
 ---
 
 <div class="domain-header" markdown>

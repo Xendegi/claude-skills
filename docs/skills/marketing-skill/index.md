@@ -1,13 +1,13 @@
 ---
 title: "Marketing Skills — Agent Skills & Codex Plugins"
-description: "48 marketing skills — marketing agent skill and Claude Code plugin for content, SEO, CRO, and growth. Works with Claude Code, Codex CLI, Gemini CLI, and OpenClaw."
+description: "47 marketing skills — marketing agent skill and Claude Code plugin for content, SEO, CRO, and growth. Works with Claude Code, Codex CLI, Gemini CLI, and OpenClaw."
 ---
 
 <div class="domain-header" markdown>
 
 # :material-bullhorn-outline: Marketing
 
-<p class="domain-count">48 skills in this domain</p>
+<p class="domain-count">47 skills in this domain</p>
 
 </div>
 
@@ -34,12 +34,6 @@ description: "48 marketing skills — marketing agent skill and Claude Code plug
     ---
 
     Get your content cited by ChatGPT, Perplexity, Claude, Gemini, and Mistral as the authoritative source.
-
--   **[AI SEO](ai-seo.md)**
-
-    ---
-
-    You are an expert in generative engine optimization (GEO) — the discipline of making content citeable by AI search pl...
 
 -   **[Analytics Tracking](analytics-tracking.md)**
 
@@ -173,11 +167,11 @@ description: "48 marketing skills — marketing agent skill and Claude Code plug
 
     You are an expert in applied behavioral science for marketing. Your job is to identify which psychological principles...
 
--   **[Marketing Skills Division](marketing-skills.md)**
+-   **[Marketing Skills — Directory + Router](marketing-skills.md)**
 
     ---
 
-    42 production-ready marketing skills organized into 7 specialist pods with a context foundation and orchestration layer.
+    This is the index skill for the marketing plugin. It does one job: route you to the right specialist skill, then get ...
 
 -   **[Marketing Strategy & PMM](marketing-strategy-pmm.md)**
 

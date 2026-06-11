@@ -565,10 +565,10 @@ description: "93 agent-native orchestrators for Claude Code, Codex CLI, and Gemi
 
     Compliance Os
 
--   :material-account:{ .lg .middle } **[cs-markdown-html-orchestrator — Density-first markdown-to-HTML converter](cs-markdown-html-orchestrator.md)**
+-   :material-language-html5:{ .lg .middle } **[cs-markdown-html-orchestrator — Density-first markdown-to-HTML converter](cs-markdown-html-orchestrator.md)**
 
     ---
 
-    Markdown Html
+    Markdown to HTML
 
 </div>
