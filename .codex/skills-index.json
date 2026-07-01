@@ -3,7 +3,7 @@
   "name": "claude-code-skills",
   "description": "Production-ready skill packages for AI agents - Marketing, Engineering, Product, C-Level, PM, and RA/QM",
   "repository": "https://github.com/alirezarezvani/claude-skills",
-  "total_skills": 348,
+  "total_skills": 349,
   "skills": [
     {
       "name": "business-growth-skills",
@@ -1908,6 +1908,12 @@
       "description": "Write internal company communications \u2014 3P updates (Progress/Plans/Problems), company-wide newsletters, FAQ roundups, incident reports, leadership updates, status reports, project updates, and general internal comms. Use this skill any time the user asks to draft, edit, or format something meant for internal audiences. Trigger on keywords like \"3P\", \"weekly update\", \"newsletter\", \"FAQ\", \"internal comms\", \"status report\", \"company update\", \"team update\", \"incident report\", or any request to summarize work for leadership, teammates, or the broader company. Even casual requests like \"write my update\" or \"summarize what my team did this week\" should trigger this skill."
     },
     {
+      "name": "agent-decision-receipts",
+      "source": "../../ra-qm-team/skills/agent-decision-receipts",
+      "category": "ra-qm",
+      "description": "Mint a tamper-evident, post-quantum-signed receipt for a consequential agent action (deploy, delete, pay, grant-access, model decision) so it can be verified later from the certificate alone. Use when an autonomous agent takes a side-effecting action that may need to be proven later, or when satisfying EU AI Act Article 12 record-keeping. Three decisions: whether an action needs a receipt, minting it, verifying it. Signing is delegated to the open-source OpenAgentOntology package. Not after-the-fact log analysis; not a hosted notary; not a legal opinion."
+    },
+    {
       "name": "capa-officer",
       "source": "../../ra-qm-team/skills/capa-officer",
       "category": "ra-qm",
@@ -2161,7 +2167,7 @@
       "description": "Project management and Atlassian skills"
     },
     "ra-qm": {
-      "count": 18,
+      "count": 19,
       "source": "../../ra-qm-team",
       "description": "Regulatory affairs and quality management skills"
     },
