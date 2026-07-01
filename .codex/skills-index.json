@@ -3,7 +3,7 @@
   "name": "claude-code-skills",
   "description": "Production-ready skill packages for AI agents - Marketing, Engineering, Product, C-Level, PM, and RA/QM",
   "repository": "https://github.com/alirezarezvani/claude-skills",
-  "total_skills": 347,
+  "total_skills": 348,
   "skills": [
     {
       "name": "business-growth-skills",
@@ -748,6 +748,12 @@
       "source": "../../engineering-team/skills/ms365-tenant-manager",
       "category": "engineering",
       "description": "Microsoft 365 tenant administration for Global Administrators. Automate M365 tenant setup, Office 365 admin tasks, Azure AD user management, Exchange Online configuration, Teams administration, and security policies. Generate PowerShell scripts for bulk operations, Conditional Access policies, license management, and compliance reporting. Use for M365 tenant manager, Office 365 admin, Azure AD users, Global Administrator, tenant configuration, or Microsoft 365 automation."
+    },
+    {
+      "name": "named-persona-adversarial-review",
+      "source": "../../engineering-team/skills/named-persona-adversarial-review",
+      "category": "engineering",
+      "description": "Code review through the lens of real engineers' documented philosophies (Torvalds, Thompson, Carmack, Kent Beck, Jobs, Cagan). Complements abstract-role adversarial review with named, sourced perspectives. Use when automated review findings feel generic, when a PR has architectural or UX impact, or when the author wants pre-submit hardening beyond standard checks."
     },
     {
       "name": "promote",
@@ -2120,7 +2126,7 @@
       "description": "Markdown-to-HTML converter (v2.10.0 foundation): orchestrator (context: fork, deterministic doctype classifier, refuses < 100 lines per Shihipar) + design-system (one-time onboarding wizard with WCAG-AA-validated 12-token palette, project > global > defaults precedence). Converter sub-skills (md-document, md-review, md-slides) land in v2.10.1."
     },
     "engineering": {
-      "count": 51,
+      "count": 52,
       "source": "../../engineering-team",
       "description": "Software engineering and technical skills"
     },
