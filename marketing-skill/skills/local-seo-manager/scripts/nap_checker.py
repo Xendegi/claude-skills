@@ -107,7 +107,7 @@ def compare_nap(canonical: Dict, listing: Dict) -> List[Dict]:
             'canonical': canonical.get('phone', ''),
             'found': listing.get('phone', ''),
         })
-    elif not listing.get('phone'):
+    elif canon_phone and not listing.get('phone'):
         mismatches.append({
             'field': 'phone',
             'canonical': canonical.get('phone', ''),

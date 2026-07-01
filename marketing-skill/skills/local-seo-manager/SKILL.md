@@ -292,6 +292,7 @@ Flag these without being asked:
 
 - [Local SEO Checklist](references/local-seo-checklist.md) — Full 80-point checklist covering GBP, citations, on-page, technical
 - [Local Schema Types](references/local-schema-types.md) — Schema.org types for local service businesses with examples
+- [Review Response Templates](references/review-response-templates.md) — Response templates by scenario (5-star to 1-star, review-request flows)
 
 ---
 
